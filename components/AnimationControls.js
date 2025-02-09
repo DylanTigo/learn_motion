@@ -1,13 +1,17 @@
 import React from "react";
-import { motion, useAnimationControls } from "motion";
+import { motion, useAnimation } from "framer-motion";
 
 const AnimationControls = () => {
-  const controls = useAnimationControls();
+  const controls = useAnimation();
+  const variants = {
+    initial: { rotate: 0},
+    flip: { rotate: 360},
+  }
 
   const handleClick = () => {
-    controls.start("flip");
-  };
-
+    controls.start(variants.flip);
+    // controls.start("flip");
+  }
   return (
     <div
       style={{
@@ -26,15 +30,7 @@ const AnimationControls = () => {
           height: 150,
           background: "black",
         }}
-        variants={{
-          initial: {
-            rotate: "0deg",
-          },
-          flip: {
-            rotate: "360deg",
-          },
-        }}
-        initial="initial"
+        variants={variants}
         animate={controls}
       ></motion.div>
     </div>
