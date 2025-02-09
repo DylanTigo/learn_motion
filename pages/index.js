@@ -1,8 +1,8 @@
-import AnimationControls from "../components/Animationcontrols";
 import BasicsOfMotion from "../components/BasicsOfMotion";
+/* import AnimationControls from "../components/AnimationControls.js";
 import Gestures from "../components/Gestures";
 import ScrollAnimations from "../components/ScrollAnimation";
-import ViewBasedAnimations from "../components/ViewBaseAnimaions";
+import ViewBasedAnimations from "../components/ViewBaseAnimaions"; */
 
 export default function Home() {
   return (

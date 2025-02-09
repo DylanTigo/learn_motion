@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useAnimationControls } from "framer-motion";
+import { motion, useAnimationControls } from "motion";
 
 const AnimationControls = () => {
   const controls = useAnimationControls();
