@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 
 const ViewBasedAnimations = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref);
 
   useEffect(() => {
     console.log("Is in view -> ", isInView);
@@ -16,6 +16,7 @@ const ViewBasedAnimations = () => {
         style={{ height: "100vh", background: "black" }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ amount: 0.1 }}
         transition={{ duration: 1 }}
       />
       <div
